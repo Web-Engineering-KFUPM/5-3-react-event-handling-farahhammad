@@ -12,6 +12,7 @@ export default function TaskItem({ id, text, onDelete }) {
           aria-label="Delete task"
           title="Delete"
           // TODO: onClick={() => onDelete(id)}
+          onClick={() => onDelete(id)}
         >
           🗑️
         </button>

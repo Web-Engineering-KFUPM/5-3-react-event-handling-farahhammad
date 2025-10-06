@@ -3,7 +3,7 @@ import TaskItem from "./TaskItem";
 
 export default function TaskList({ tasks, onDelete }) {
     if (!tasks || tasks.length === 0) {
-        return <p className="empty">No tasks yet. Add something above 👆</p>;
+        return <p className="empty">No tasks yet</p>;
     }
   return (
     <ul className="list">
@@ -12,7 +12,11 @@ export default function TaskList({ tasks, onDelete }) {
 
       {/* Task 2 & 3 – Map tasks to TaskItem */}
         {tasks.map((task) => (
-            <TaskItem key={task.id} id={task.id} text={task.text} />
+            <TaskItem
+                key={task.id}
+                id={task.id}
+                text={task.text}
+                onDelete={onDelete} />
         ))}
       
     </ul>
