@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TaskList from "./TaskList";
 
 export default function TaskApp() {
-
     const [text, setText] = useState("");
     const [tasks, setTasks] = useState([]);
   
@@ -37,7 +36,6 @@ export default function TaskApp() {
           value={text}
           // TODO: onChange={(e) => setText(e.target.value)}
           onChange={(e) => setText(e.target.value)}
-
 
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSubmit();
